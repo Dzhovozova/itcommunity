@@ -1,10 +1,10 @@
-from django.urls import path 
+from django.urls import path
 from accounts.views import ( 
     LoginView,  
     logout_user, 
     UserRegisterView, 
     UpdateUserView,
-    UsersSearchListView,
+    UsersSearchListView, 
     FollowUser,
     UnFollowUser,
     UserProfileView,

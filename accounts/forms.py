@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, SetPasswordForm
+from django.contrib.auth.forms import UserCreationForm, SetPasswordForm, PasswordResetForm
 
 from accounts.models import User
 
@@ -100,4 +100,5 @@ class UserPasswordChangeForm(SetPasswordForm):
         fields = ["new_password1", "new_password2"]
         
 
-
+class CustomPasswordResetForm(PasswordResetForm):
+    email = forms.EmailField(label='Email', max_length=254, widget=forms.EmailInput(attrs={'autocomplete': 'email'}))
